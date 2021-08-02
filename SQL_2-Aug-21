@@ -1,0 +1,15 @@
+Notes:
+DATEDIFF - Two dates to calculate the number of days between. (date1 - date2)
+SET sql_mode='' to avoid errors related to group by clause
+In from clause how to combine 2 tables without joins
+
+
+SET sql_mode='';
+
+select start_date, end_date 
+from 
+(select start_date from Projects where start_date NOT IN (select end_date from Projects)) a,
+(select end_date from Projects where end_date NOT IN (select start_date from Projects)) b
+where start_date < end_date
+group by start_date
+order by DATEDIFF(end_date, start_date) ,start_date;
