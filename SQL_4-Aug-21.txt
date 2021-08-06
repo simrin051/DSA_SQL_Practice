@@ -1,0 +1,5 @@
+select hacker.hacker_id,hacker_name,SUM(A.totalscore) FROM Hacker
+INNER JOIN (select hacker_id, MAX(score) as totalscore from Submissions group by hacker_id, challenge_id ) as A
+ON  A.hacker_id=hacker.hacker_id
+group by hacker.hacker_id
+Having A.totalscore >0;
