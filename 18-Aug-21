@@ -1,0 +1,13 @@
+
+        -> How to combine 3 tables
+        ( A common table and 2 other tables )
+
+        select S.Name from Students S
+        inner join Packages ps
+        on S.id=ps.id
+        inner join Friends
+        on S.id=Friends.id
+        inner join Packages pf
+        on Friends.Friend_id = pf.id
+        where pf.salary > ps.salary
+        order by pf.salary asc;
