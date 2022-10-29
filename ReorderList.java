@@ -1,5 +1,10 @@
 package com.main;
 
+1.  find the middle of the list using fast and slow pointers.
+2.  reverse the last half of linked-list
+3.  rearrange the list in zigzag manner
+
+
 public class LinkedListProb {
 	
 	public static void main(String[] args) {
