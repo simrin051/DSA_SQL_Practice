@@ -1,0 +1,16 @@
+class Solution {
+    public int smallestRangeII(int[] A, int K) {
+
+        Arrays.sort(A);
+        int n = A.length,res = A[n-1]-A[0];
+        int max = A[n-1]-K, min= A[0]+K;
+    
+        for(int i=0;i<n-1;i++) {
+            int j=i+1;
+            int low = Math.min(min,A[j]-K);
+            int high = Math.max(max,A[i]+K);
+            res = Math.min(res,high-low);
+        }
+        return res;
+    }
+}
