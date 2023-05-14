@@ -1,0 +1,12 @@
+2683. Neighboring Bitwise XOR
+
+class Solution {
+    public boolean doesValidArrayExist(int[] derived) {
+        int ans = 0;
+        for(int num : derived) {
+            if(num==1) ++ans;
+        }
+        if(ans%2==0) return true;
+        return false;
+    }
+}
