@@ -1,3 +1,15 @@
 Ways to Split Array Into Good Subarrays - https://leetcode.com/problems/ways-to-split-array-into-good-subarrays/description/
 - Eliminate the zeroes preceding.
 - count the number of ones between consecutive ones. If there are n zeroes, then there are n+1 combinations.
+
+Find GCD 
+
+  public int gcd(int x, int y) {
+        int gcd = 0; 
+        for(int i = 1; i <= x && i <= y; i++)
+        {
+            if(x%i==0 && y%i==0)
+                gcd = i;
+        }
+        return gcd;
+    }
