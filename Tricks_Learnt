@@ -13,3 +13,12 @@ Find GCD
         }
         return gcd;
     }
+
+
+
+Explanation -
+SP - Selling Price
+CP - Cost Price / Buy Price
+
+Profit = SP-CP
+CP = SP - Profit
