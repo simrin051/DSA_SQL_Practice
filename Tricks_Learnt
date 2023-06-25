@@ -1,0 +1,3 @@
+Ways to Split Array Into Good Subarrays - https://leetcode.com/problems/ways-to-split-array-into-good-subarrays/description/
+- Eliminate the zeroes preceding.
+- count the number of ones between consecutive ones. If there are n zeroes, then there are n+1 combinations.
